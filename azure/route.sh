@@ -2,13 +2,13 @@
 
 fn azure_route_table_create(name, group, location) {
 	(
-		azure network route-table create --name $name --resource-group $group --location $location
+		az network route-table create --name $name --resource-group $group --location $location
 	)
 }
 
 fn azure_route_table_delete(name, group) {
 	(
-		azure network route-table delete --name $name --resource-group $group
+		az network route-table delete --name $name --resource-group $group
 	)
 }
 
@@ -37,14 +37,14 @@ fn azure_route_table_route_set_hop_address(instance, hopaddress) {
 }
 
 fn azure_route_table_route_create(instance) {
-	azure network route-table route create $instance
+	az network route-table route create $instance
 }
 
 # azure_route_table_add_route Create route in a Route Table
 # deprecated: Use the azure_route_table_route_new function
 fn azure_route_table_add_route(name, group, routetable, address, hoptype, hopaddress) {
 	(
-		azure network route-table route create
+		az network route-table route create
 						--name $name
 						--resource-group $group
 						--route-table-name $routetable
@@ -56,7 +56,7 @@ fn azure_route_table_add_route(name, group, routetable, address, hoptype, hopadd
 
 fn azure_route_table_delete_route(name, group, routetable) {
 	(
-		azure network route-table route delete
+		az network route-table route delete
 						--name $name
 						--resource-group $group
 						--route-table-name $routetable
