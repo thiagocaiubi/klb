@@ -103,11 +103,11 @@ fn azure_nic_set_lb_inbound_nat_rule_ids(instance, natruleids) {
 }
 
 fn azure_nic_create(instance) {
-	azure network nic create $instance
+	az network nic create $instance
 }
 
 fn azure_nic_delete(name, group) {
 	(
-		azure network nic delete --name $name --resource-group $group
+		az network nic delete --name $name --resource-group $group
 	)
 }

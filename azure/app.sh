@@ -6,7 +6,7 @@
 # `uri` is the comma-delimitied URIs that identify the application
 fn azure_app_create(name, homepage, uri) {
 	out   <= (
-		azure ad app create --json
+		az ad app create --output
 					--name $name
 					--home-page $homepage
 					--identifier-uris $uri
@@ -23,5 +23,5 @@ fn azure_app_create(name, homepage, uri) {
 # azure_app_delete deletes a exit `active directory application`.
 # `objid` is the display name for the application
 fn azure_app_delete(objid) {
-	azure ad app delete --objectid $objid
+	az ad app delete --id $objid
 }

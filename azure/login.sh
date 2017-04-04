@@ -3,6 +3,7 @@
 # AZURE_TENANT_ID
 # AZURE_CLIENT_ID
 # AZURE_CLIENT_SECRET
+# no support using -q
 
 fn azure_login() {
         azure config mode arm
@@ -11,5 +12,5 @@ fn azure_login() {
         clientID = $AZURE_CLIENT_ID
         secretID = $AZURE_CLIENT_SECRET
 
-        azure login -q -u $clientID --service-principal --tenant $tenantID -p $secretID
+        az login -u $clientID --service-principal --tenant $tenantID -p $secretID
 }
