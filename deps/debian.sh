@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -o nounset
 set -o errexit
 echo "installing python pip and nodejs npm"

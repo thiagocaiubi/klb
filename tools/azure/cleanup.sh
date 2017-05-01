@@ -1,4 +1,3 @@
-#!/usr/bin/env nash
 
 import klb/azure/login
 import klb/azure/group
