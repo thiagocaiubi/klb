@@ -28,7 +28,7 @@ For arch linux you can use:
 sudo ./deps/arch.sh
 ```
 
-For debian linux you can use:
+Or for debian linux you can use:
 
 ```sh
 sudo ./deps/debian.sh
